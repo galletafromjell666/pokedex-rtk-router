@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+  overflow-y: hidden;
+}
+.typeName {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.4) 100%
+  );
+}
+
+.spining-pokeball {
+  animation: animName 4s linear infinite;
+}
+
+@keyframes animName {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+a {
+  margin: 0 !important;
+}
+
