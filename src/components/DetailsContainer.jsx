@@ -13,7 +13,7 @@ const DetailsContainer = ({
   weight,
   height,
 }) => {
-  //console.log("stats", stats);
+  console.log(name)
   return (
       <div
         id="pkmTest"

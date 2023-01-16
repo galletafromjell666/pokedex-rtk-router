@@ -1,6 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 import { store } from "../store";
-import { pokeApi } from "../services/pokeApi";
+import { pokeApi } from "../features/pokeApiSlice";
 
 export const rootLoader = async () => {
   //first gen includes 151 pkm

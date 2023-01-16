@@ -1,8 +1,11 @@
+
 import { useLoaderData } from "react-router-dom";
 import { store } from "../store";
-import { pokeApi } from "../services/pokeApi";
+import { pokeApi } from "../features/pokeApiSlice";
 import DetailsContainer from "../components/DetailsContainer";
 export const pokemonLoader = async ({ params: { pokemonName } }) => {
+  
+ 
   console.log(pokemonName);
   const apiPromise = store.dispatch(
     pokeApi.endpoints.getPokemonByName.initiate(pokemonName)
@@ -17,10 +20,8 @@ export const pokemonLoader = async ({ params: { pokemonName } }) => {
 };
 const Pokemon = () => {
   const { data } = useLoaderData();
-  //console.log(data)
-  
   return (
-    <div className="w-full h-auto" >
+    <div className="" >
       {data ? <DetailsContainer {...data} /> : <h1>error u.u</h1>}
     </div>
   );
