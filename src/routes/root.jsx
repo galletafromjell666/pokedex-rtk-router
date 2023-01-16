@@ -7,7 +7,6 @@ export const rootLoader = async () => {
   const apiPromise = store.dispatch(pokeApi.endpoints.getAllPokemon.initiate());
   try {
     const response = await apiPromise;
-    console.log(response);
     return response;
   } catch (e) {
     console.log(`error `, e);

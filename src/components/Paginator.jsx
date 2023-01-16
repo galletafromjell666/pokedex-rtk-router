@@ -20,15 +20,14 @@ const Paginator = ({ id, parentClassName }) => {
   return (
     <div id="paginator" className={parentClassName}>
       {paginationArr.map((i) => {
-        console.log("valor de i =", i);
         return (
           <Link key={i} to={`/pokemon/${i}`}>
             <h1
               className={
                 (i === id
-                  ? "bg-white/70 rounded-md my-2 px-3 text-gray-600"
-                  : "text-white/80") +
-                " text-center text-xl font-bold font-nunito"
+                  ? "bg-white/70 rounded-md my-2 text-gray-600"
+                  : "text-white/80 hover:bg-white/20 hover:rounded-md hover:text-gray-500") +
+                " text-center text-xl font-bold font-nunito px-3"
               }
             >
               {i}

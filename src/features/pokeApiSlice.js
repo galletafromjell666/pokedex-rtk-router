@@ -14,14 +14,14 @@ export const pokeApi = createApi({
         return response;
       },
     }),
-    getEvolutionChain: builder.query({
-      query: (id) => `evolution-chain/${id}/`,
-    }),
+    // getEvolutionChain: builder.query({
+    //   query: (id) => `evolution-chain/${id}/`,
+    // }),
   }),
 });
 
 export const {
   useGetAllPokemonQuery,
   useGetPokemonByNameQuery,
-  useGetEvolutionChainQuery,
+ // useGetEvolutionChainQuery,
 } = pokeApi;

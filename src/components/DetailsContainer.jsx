@@ -13,7 +13,6 @@ const DetailsContainer = ({
   weight,
   height,
 }) => {
-  console.log(name)
   return (
       <div
         id="pkmTest"
@@ -22,11 +21,11 @@ const DetailsContainer = ({
       >
         <div className="h-full mx-12">
           <div className="h-[20%] flex flex-col">
-            <div className="mt-auto">
-              <span className="text-3xl font-bold">
+            <div className="mt-auto font-nunito drop-shadow-md">
+              <span className="text-3xl font-bold ">
                 #{id.toString().padStart(3, 0)}
               </span>
-              <h1 className="text-4xl font-nunito pl-2 pt-2 capitalize font-bold">
+              <h1 className="text-[3rem] pl-2 pt-2 capitalize font-bold">
                 {name}
               </h1>
             </div>
@@ -34,7 +33,7 @@ const DetailsContainer = ({
           <div className="flex flex-row h-3/5 justify-center items-center">
             <div className="w-[65%] flex flex-row justify-between h-full">
               <div className="w-[25%] overflow-y-visible">
-                <div className="relative flex flex-col font-bold text-lg h-full wrap content-end justify-center space-y-1">
+                <div className="relative flex flex-col drop-shadow-md font-bold text-lg h-full wrap content-end justify-center space-y-1">
                   <p>
                     Weight:{" "}
                     <span className="font-normal">{weight * 0.1}Kg</span>
@@ -44,7 +43,7 @@ const DetailsContainer = ({
                   </p>
                   <div className="absolute bottom-0 left-0 ml-[5rem]  w-[300%]">
                     <WanaKanaWrapper
-                      parentClassName={"text-[6.4rem] w-fit text-black/40"}
+                      parentClassName={"text-[6.4rem] w-fit text-black/40 drop-shadow-2xl"}
                       text={name}
                     />
                   </div>
@@ -52,7 +51,7 @@ const DetailsContainer = ({
               </div>
               <div className="w-[75%]">
                 <img
-                  className="h-[90%] mx-auto"
+                  className="h-[90%] mx-auto drop-shadow-md"
                   src={sprites.other["official-artwork"].front_default}
                 />
               </div>
@@ -71,7 +70,7 @@ const DetailsContainer = ({
                   ))}
                 </div>
               </div>
-              <Paginator parentClassName={"absolute right-0 top-[25%]"} id={id} />
+              <Paginator parentClassName={"absolute right-0 top-[25%] drop-shadow-xl"} id={id} />
             </div>
           </div>
         </div>
