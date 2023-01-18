@@ -15,8 +15,8 @@ export const rootLoader = async () => {
 
 const Root = () => {
   return (
-    <div>
-      <div className="bg-stone-400 w-full h-[50px]">
+    <div className="relative">
+      <nav className="bg-transparent fixed top-0 z-50 w-full h-[50px]">
         <Link to={`/`}>
           <button
             type="button"
@@ -25,7 +25,7 @@ const Root = () => {
             Go Home
           </button>
         </Link>
-      </div>
+      </nav>
       <Outlet />
     </div>
   );

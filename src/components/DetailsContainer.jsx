@@ -16,7 +16,7 @@ const DetailsContainer = ({
   return (
     <div
       id="pkmTest"
-      className={`text-slate-50  min-h-fit md:h-[calc(100vh-50px)] `}
+      className={`text-slate-50  min-h-fit md:h-[calc(100vh-50px)] pt-[50px]`}
       style={{ backgroundColor: typeColor }}
     >
       <div className="h-full pt-8 md:pt-0 mx-2 md:mx-6 lg:mx-12">
@@ -57,24 +57,27 @@ const DetailsContainer = ({
               />
             </div>
           </div>
-          <div className="w-full md:w-[35%] h-full relative pb-8 overflow-x-hidden">
-            <div className="flex flex-row space-x-6">
-              {types.map((type, index) => {
-                return <PokemonTypeIcon key={index} type={type.type.name} />;
-              })}
-            </div>
-            <div>
-              <h1 className="text-4xl my-6 font-bold ">Base stats:</h1>
-              <div className="flex flex-col border-l-[6px] border-white/80 pl-6">
-                {stats.map((stat, index) => (
-                  <Stats key={index} stats={stat} />
-                ))}
+          <div className="w-full md:w-[35%] h-fit relative pb-8 overflow-x-hidden">
+            <div className="flex flex-col md:flex-row justify-center content-center">
+              <div>
+                <div className="flex space-x-6">
+                  {types.map((type, index) => {
+                    return (
+                      <PokemonTypeIcon key={index} type={type.type.name} />
+                    );
+                  })}
+                </div>
+                <div>
+                  <h1 className="text-4xl my-6 font-bold ">Base stats:</h1>
+                  <div className="flex flex-col border-l-[6px] border-white/80 pl-6">
+                    {stats.map((stat, index) => (
+                      <Stats key={index} stats={stat} />
+                    ))}
+                  </div>
+                </div>
               </div>
+              <Paginator parentClassName={" drop-shadow-xl"} id={id} />
             </div>
-            <Paginator
-              parentClassName={"absolute pt-8  bottom-0 left-1/2 transform -translate-x-1/2 md:right-0  md:top-[25%] drop-shadow-xl"}
-              id={id}
-            />
           </div>
         </div>
       </div>

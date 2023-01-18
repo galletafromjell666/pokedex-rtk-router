@@ -18,7 +18,7 @@ const Paginator = ({ id, parentClassName }) => {
   const paginationArr = arrayRange(id - 5, id + 5, 1);
 
   return (
-    <div id="paginator" className={parentClassName + " flex flex-row md:flex-col overflow-visible"}>
+    <div id="paginator" className={parentClassName + " flex flex-row md:flex-col justify-center md:pl-4 content-center"}>
       {paginationArr.map((i) => {
         return (
           <Link key={i} to={`/pokemon/${i}`}>

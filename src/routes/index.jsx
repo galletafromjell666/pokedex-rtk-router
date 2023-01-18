@@ -30,7 +30,7 @@ const index = () => {
     if (isVisible) dispatch(incrementByAmount(15));
   }, [isVisible]);
   return (
-    <div className="relative flex  items-center justify-center bg-white min-h-max max-h-auto w-full">
+    <div className="relative flex  items-center justify-center bg-white min-h-max max-h-auto w-full pt-[50px]">
       {(showLoader || !pokmData) && (
         <div className="absolute left-0 top-0 z-50 w-full h-screen bg-white">
           <Loader />
