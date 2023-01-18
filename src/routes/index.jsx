@@ -37,7 +37,7 @@ const index = () => {
         </div>
       )}
       {pokmData ? (
-        <div className="relative grid gap-x-12 grid-cols-1 gap-y-12 2col:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 md:gap-x-28 ">
+        <div className="relative py-8 grid gap-x-12 grid-cols-1 gap-y-12 2col:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 md:gap-x-28 ">
           {pokmData.results.map((poke, index) => {
             return (
               <div key={index} className="">

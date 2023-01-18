@@ -43,7 +43,7 @@ const PreviewCard = ({ name }) => {
             {data && (
               <div>
                 <img
-                  className="relative w-full z-50 h-auto right-[2px] bottom-[12px]"
+                  className="relative w-full z-40 h-auto right-[2px] bottom-[12px]"
                   src={data.sprites.other["official-artwork"].front_default}
                   alt={data.name}
                 />

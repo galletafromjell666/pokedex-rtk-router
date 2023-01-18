@@ -18,14 +18,14 @@ const Paginator = ({ id, parentClassName }) => {
   const paginationArr = arrayRange(id - 5, id + 5, 1);
 
   return (
-    <div id="paginator" className={parentClassName}>
+    <div id="paginator" className={parentClassName + " flex flex-row md:flex-col overflow-visible"}>
       {paginationArr.map((i) => {
         return (
           <Link key={i} to={`/pokemon/${i}`}>
             <h1
               className={
                 (i === id
-                  ? "bg-white/70 rounded-md my-2 text-gray-600"
+                  ? "bg-white/70 rounded-md md:my-2 text-gray-600"
                   : "text-white/80 hover:bg-white/20 hover:rounded-md hover:text-gray-500") +
                 " text-center text-xl font-bold font-nunito px-3"
               }
