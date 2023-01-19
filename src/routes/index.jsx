@@ -30,14 +30,14 @@ const index = () => {
     if (isVisible) dispatch(incrementByAmount(15));
   }, [isVisible]);
   return (
-    <div className="relative flex  items-center justify-center bg-white min-h-max max-h-auto w-full pt-[50px]">
+    <div className="relative flex  items-center justify-center bg-white ">
       {(showLoader || !pokmData) && (
         <div className="absolute left-0 top-0 z-50 w-full h-screen bg-white">
           <Loader />
         </div>
       )}
       {pokmData ? (
-        <div className="relative py-8 grid gap-x-12 grid-cols-1 gap-y-12 2col:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 md:gap-x-28 ">
+        <div className="relative pt-[90px] grid gap-x-12 grid-cols-1 gap-y-12 2col:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 md:gap-x-28 ">
           {pokmData.results.map((poke, index) => {
             return (
               <div key={index} className="">

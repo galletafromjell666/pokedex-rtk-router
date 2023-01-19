@@ -16,11 +16,11 @@ const DetailsContainer = ({
   return (
     <div
       id="pkmTest"
-      className={`text-slate-50  min-h-fit md:h-[calc(100vh-50px)] pt-[50px]`}
+      className={`text-slate-50 min-h-screen flex items-center pt-[90px] md:pt-0 max-h-fit`}
       style={{ backgroundColor: typeColor }}
     >
-      <div className="h-full pt-8 md:pt-0 mx-2 md:mx-6 lg:mx-12">
-        <div className="h-[20%] flex flex-col">
+      <div className="w-full md:flex-1 pt-8 px-4 md:pt-0 lg:mx-12">
+        <div className=" flex flex-col">
           <div className="mt-auto font-nunito drop-shadow-md">
             <span className="text-3xl font-bold ">
               #{id.toString().padStart(3, 0)}
@@ -35,15 +35,21 @@ const DetailsContainer = ({
             <div className="w-full mx-auto md:w-[25%] overflow-y-visible ">
               <div className="relative flex flex-col  drop-shadow-md font-bold text-lg h-full content-center items-center wrap md:content-end justify-center space-y-1">
                 <p>
-                  Weight: <span className="font-normal">{weight * 0.1}Kg</span>
+                  Weight:{" "}
+                  <span className="font-normal">
+                    {(weight * 0.1).toFixed(2)}Kg
+                  </span>
                 </p>
                 <p>
-                  Height: <span className="font-normal">{height / 10}m</span>
+                  Height:{" "}
+                  <span className="font-normal">
+                    {(height / 10).toFixed(2)}m
+                  </span>
                 </p>
-                <div className="absolute bottom-0 left-0 ml-0 md:ml-[5rem] ">
+                <div className="py-8 md:absolute md:w-[50vw] md:py-0 bottom-0 left-0 ml-0 md:ml-[5rem] ">
                   <WanaKanaWrapper
                     parentClassName={
-                      "text-[3.4rem] w-fit text-black/40 drop-shadow-2xl md:text-[6.4rem]"
+                      "text-[3.4rem] w-fit text-black/40 drop-shadow-2xl md:text-[5.4rem] lg:text-[6.4rem]"
                     }
                     text={name}
                   />
@@ -58,7 +64,7 @@ const DetailsContainer = ({
             </div>
           </div>
           <div className="w-full md:w-[35%] h-fit relative pb-8 overflow-x-hidden">
-            <div className="flex flex-col md:flex-row justify-center content-center">
+            <div className="flex flex-col md:flex-row justify-between content-center">
               <div>
                 <div className="flex space-x-6">
                   {types.map((type, index) => {
