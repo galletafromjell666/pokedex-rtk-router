@@ -21,7 +21,7 @@ const index = () => {
     if (pokmData) {
       const timer = setTimeout(() => {
         setShowLoader(false);
-      }, Math.random() * (500 - 900) + 500);
+      }, Math.random() * (200 - 400) + 200);
       return () => clearTimeout(timer);
     }
   }, [pokmData]);
