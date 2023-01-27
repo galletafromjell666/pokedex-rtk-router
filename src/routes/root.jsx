@@ -3,8 +3,8 @@ import { store } from "../store";
 import { pokeApi } from "../features/pokeApiSlice";
 import "./";
 export const rootLoader = async () => {
-  //first gen includes 151 pkm
-  const apiPromise = store.dispatch(pokeApi.endpoints.getAllPokemon.initiate());
+  const {queryLimit: {limit}} = store.getState()
+  const apiPromise = store.dispatch(pokeApi.endpoints.getAllPokemon.initiate(limit));
   try {
     const response = await apiPromise;
     return response;

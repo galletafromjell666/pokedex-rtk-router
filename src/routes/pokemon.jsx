@@ -18,7 +18,7 @@ const Pokemon = () => {
   const { data } = useLoaderData();
   return (
     <div className="" >
-      {data ? <DetailsContainer {...data} /> : <h1>error u.u</h1>}
+      {data && <DetailsContainer {...data} />}
     </div>
   );
 };

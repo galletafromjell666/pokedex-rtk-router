@@ -1,8 +1,7 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
-import { useGetAllPokemonQuery } from "../features/pokeApiSlice";
-import { Link } from "react-router-dom";
+import { Link, useRouteLoaderData } from "react-router-dom";
 import PreviewCard from "../components/PreviewCard";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 import { incrementByAmount } from "../features/queryLimitSlice";
@@ -10,8 +9,10 @@ import Loader from "../components/Loader";
 const index = () => {
   const [showLoader, setShowLoader] = useState(true);
   const dispatch = useDispatch();
-  const limitQuery = useSelector((state) => state.queryLimit.value);
-  const { data: pokmData } = useGetAllPokemonQuery(limitQuery);
+  //const limitQuery = useSelector((state) => state.queryLimit.value);
+  //
+  const { data: pokmData, isError } = useRouteLoaderData("root");
+  //
   const [containerRef, isVisible] = useIntersectionObserver({
     root: null,
     rootMargin: "200px",
@@ -31,7 +32,7 @@ const index = () => {
   }, [isVisible]);
   return (
     <div className="relative flex  items-center justify-center bg-white ">
-      {(showLoader || !pokmData) && (
+      {(showLoader || isError) && (
         <div className="absolute left-0 top-0 z-50 w-full h-screen bg-white">
           <Loader />
         </div>
@@ -52,7 +53,7 @@ const index = () => {
           <div ref={containerRef} className="absolute bottom-0"></div>
         </div>
       ) : (
-        <h1>Loading index ...</h1>
+        null
       )}
     </div>
   );
