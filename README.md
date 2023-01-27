@@ -8,7 +8,7 @@ React Pokédex
 
 # Demo
 
-[Pokedex - Live ◀️](giopokedeex.netlify.app)
+[Pokedex - Live ◀️](https://giopokedeex.netlify.app/)
 
 ## Features ✅
 
