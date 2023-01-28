@@ -29,7 +29,7 @@ Key Libs used in this project are:
 | [Redux Toolkit](https://github.com/reduxjs/redux-toolkit) | The official, opinionated, batteries-included toolset for efficient Redux development. |
 
 ## Custom hooks
- Lib             | Description   |
+ Hook             | Description   |
 | :-------------:|--------------|
 | useIntersectionObserver| A React hook implementing the Intersection Observer API |
     
