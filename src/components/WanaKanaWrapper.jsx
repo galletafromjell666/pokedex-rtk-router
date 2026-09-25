@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { toKana } from "wanakana";
 const WanaKanaWrapper = ({ text, parentClassName }) => {
   if (text) {

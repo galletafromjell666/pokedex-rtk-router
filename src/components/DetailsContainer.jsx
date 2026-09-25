@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import PokemonTypeIcon from "./PokemonTypeIcon";
 import WanaKanaWrapper from "./WanaKanaWrapper";
 import Paginator from "./Paginator";

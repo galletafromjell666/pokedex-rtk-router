@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useGetPokemonByNameQuery } from "../features/pokeApiSlice";
 import PokeBall from "./../assets/pokeball.png";
 const PreviewCard = ({ name }) => {

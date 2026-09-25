@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-
 const Stats = ({ stats }) => {
   return (
     <div className="bg-white/70 my-2 w-fit rounded-lg px-4 py-1 drop-shadow-lg">
