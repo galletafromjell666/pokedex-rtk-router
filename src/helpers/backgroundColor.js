@@ -17,5 +17,5 @@ export const Colors = {
     ghost: "#715796",
     dragon: "#7138f8",
     dark: "#6e5849",
-    unknown: "FFFDFDFD",
+    unknown: "#FFFDFDFD",
 };
