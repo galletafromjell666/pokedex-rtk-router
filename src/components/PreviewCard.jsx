@@ -1,7 +1,5 @@
-/* eslint-disable react/prop-types */
 import { useGetPokemonByNameQuery } from "../features/pokeApiSlice";
 import PokeBall from "./../assets/pokeball.png";
-import "react-lazy-load-image-component/src/effects/blur.css";
 const PreviewCard = ({ name }) => {
   const { data } = useGetPokemonByNameQuery(name);
   let styleBgColor;
@@ -49,11 +47,6 @@ const PreviewCard = ({ name }) => {
                 />
               </div>
             )}
-            {/* <LazyLoadImage
-                  
-                  alt="Image Alt"
-                  placeholderSrc={PokeBall}
-                /> */}
           </div>
         </figure>
         <img

@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-
 import { Link } from "react-router-dom";
 const Paginator = ({ id, parentClassName }) => {
   const arrayRange = (start, stop, step) => {

@@ -8,10 +8,7 @@ export const store = configureStore({
     queryLimit: queryLimitReducer
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({
-      immutableCheck: false,
-      serializableCheck: false,
-    }).concat(pokeApi.middleware),
+    getDefaultMiddleware().concat(pokeApi.middleware),
 });
 
 setupListeners(store.dispatch);

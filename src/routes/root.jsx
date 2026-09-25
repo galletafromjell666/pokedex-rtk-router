@@ -1,16 +1,10 @@
 import { Link, Outlet } from "react-router-dom";
 import { store } from "../store";
 import { pokeApi } from "../features/pokeApiSlice";
-import "./";
 export const rootLoader = async () => {
-  const {queryLimit: {limit}} = store.getState()
-  const apiPromise = store.dispatch(pokeApi.endpoints.getAllPokemon.initiate(limit));
-  try {
-    const response = await apiPromise;
-    return response;
-  } catch (e) {
-    console.log(`error `, e);
-  }
+  const { queryLimit: { limit } } = store.getState();
+  // Rejections propagate to the route errorElement instead of being swallowed.
+  return store.dispatch(pokeApi.endpoints.getAllPokemon.initiate(limit));
 };
 
 const Root = () => {
