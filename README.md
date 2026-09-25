@@ -38,6 +38,6 @@ Getting started
 ```sh
 git clone git@github.com:galletafromjell666/pokedex-rtk-router.git
 cd pokedex-rtk-router
-npm install
-npm run dev # open localhost:5173
+pnpm install
+pnpm dev # open localhost:5173
 ```
