@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { LazyLoadComponent } from "react-lazy-load-image-component";
 import { Link, useRouteLoaderData } from "react-router-dom";
 import PreviewCard from "../components/PreviewCard";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
@@ -37,13 +36,11 @@ const index = () => {
       )}
       {pokmData ? (
         <div className="relative pt-[90px] grid gap-x-12 grid-cols-1 gap-y-12 2col:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 md:gap-x-28 ">
-          {pokmData.results.slice(0, limit).map((poke, index) => {
+          {pokmData.results.slice(0, limit).map((poke) => {
             return (
-              <div key={index} className="">
+              <div key={poke.name} className="">
                 <Link to={`pokemon/${poke.name}`}>
-                  <LazyLoadComponent threshold={250}>
-                    <PreviewCard {...poke} />
-                  </LazyLoadComponent>
+                  <PreviewCard {...poke} />
                 </Link>
               </div>
             );

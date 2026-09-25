@@ -15,22 +15,6 @@ body {
   );
 }
 
-.spining-pokeball {
-  animation: animName 4s linear infinite;
-}
-
-@keyframes animName {
-  0% {
-    transform: rotate(0deg);
-  }
-  80% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
-}
-
 a {
   margin: 0 !important;
 }
